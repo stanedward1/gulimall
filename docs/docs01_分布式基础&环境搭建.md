@@ -12,6 +12,7 @@
   - [其他环境](#%E5%85%B6%E4%BB%96%E7%8E%AF%E5%A2%83)
     - [mvn setting配置](#mvn-setting%E9%85%8D%E7%BD%AE)
     - [vscode 插件安装](#vscode-%E6%8F%92%E4%BB%B6%E5%AE%89%E8%A3%85)
+  - [容器的自动启用](#%E5%AE%B9%E5%99%A8%E7%9A%84%E8%87%AA%E5%8A%A8%E5%90%AF%E7%94%A8)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -130,5 +131,13 @@ Live Server
 open in browser
 
 Vetur
+```
+
+## 容器的自动启用
+
+```shell
+sudo docker update mysql --restart=always
+
+sudo docker update redis --restart=always
 ```
 
