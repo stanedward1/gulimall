@@ -6,9 +6,9 @@
  * 版权所有，侵权必究！
  */
 
-package com.atguigu.common.utils.xss;
+package com.atguigu.common.xss;
 
-import io.renren.common.exception.RRException;
+import com.atguigu.common.utils.RRException;
 import org.apache.commons.lang.StringUtils;
 
 /**

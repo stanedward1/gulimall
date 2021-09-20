@@ -47,7 +47,7 @@ public class Query<T> {
 
         //排序字段
         //防止SQL注入（因为sidx、order是通过拼接SQL实现排序的，会有SQL注入风险）
-        String orderField = com.atguigu.common.utils.xss.SQLFilter.sqlInject((String)params.get(Constant.ORDER_FIELD));
+        String orderField = com.atguigu.common.xss.SQLFilter.sqlInject((String)params.get(Constant.ORDER_FIELD));
         String order = (String)params.get(Constant.ORDER);
 
 
