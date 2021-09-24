@@ -1,4 +1,4 @@
-package com.atguigu.common.utils.xss;
+package com.atguigu.common.xss;
 
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
