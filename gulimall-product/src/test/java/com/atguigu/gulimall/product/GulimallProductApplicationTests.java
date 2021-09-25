@@ -23,14 +23,17 @@ class GulimallProductApplicationTests {
     void contextLoads() {
         BrandEntity brandEntity = new BrandEntity();
 
-        brandEntity.setName("华为");
+        brandEntity.setName("拯救者");
         brandService.save(brandEntity);
         System.out.println("保存成功！！！");
 
-//        List<BrandEntity> list = brandService.list(new QueryWrapper<BrandEntity>().eq("brand_id", 1L));
-//        list.forEach(item)->{
-//            System.out.println(item);
-//        };
-    }
+//        brandEntity.setBrandId(1L);
+//        brandEntity.setDescript("拯救者R9000P YYDS");
+//        brandService.updateById(brandEntity);
 
+//        List<BrandEntity> list = brandService.list(new QueryWrapper<BrandEntity>().eq("brand_id", 1L));
+//        list.forEach((item) -> {
+//            System.out.println(item);
+//        });
+    }
 }
