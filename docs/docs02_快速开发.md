@@ -1,3 +1,12 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [快速开发](#%E5%BF%AB%E9%80%9F%E5%BC%80%E5%8F%91)
+    - [整合MyBatis-Plus](#%E6%95%B4%E5%90%88mybatis-plus)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # 快速开发
 
 ### 整合MyBatis-Plus
