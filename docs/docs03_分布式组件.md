@@ -62,3 +62,15 @@ SpringCloud Alibaba - Seata：原 Fescar，即分布式事务解决方案
 | -------------------- | ---------------------------- | ------------------- |
 | 2020.0               | 2021.1                       | 2.4.2.RELEASE       |
 
+## nacos-server
+
+### 下载nacos-server
+
+https://github.com/alibaba/nacos/releases
+
+### 启动nacos-server
+
+访问 http://localhost:8848/nacos/
+
+帐号及密码为nacos
+
