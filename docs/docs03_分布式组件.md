@@ -74,3 +74,5 @@ https://github.com/alibaba/nacos/releases
 
 帐号及密码为nacos
 
+![screenshot-20210928-170958](image/screenshot-20210928-170958.png)
+
