@@ -9,6 +9,10 @@
     - [SpringCloud 的几大痛点](#springcloud-%E7%9A%84%E5%87%A0%E5%A4%A7%E7%97%9B%E7%82%B9)
     - [SpringCloud Alibaba 的优势](#springcloud-alibaba-%E7%9A%84%E4%BC%98%E5%8A%BF)
     - [依赖关系](#%E4%BE%9D%E8%B5%96%E5%85%B3%E7%B3%BB)
+  - [nacos-server](#nacos-server)
+    - [下载nacos-server](#%E4%B8%8B%E8%BD%BDnacos-server)
+    - [启动nacos-server](#%E5%90%AF%E5%8A%A8nacos-server)
+    - [将微服务注册到nacos中](#%E5%B0%86%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%B3%A8%E5%86%8C%E5%88%B0nacos%E4%B8%AD)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -76,3 +80,33 @@ https://github.com/alibaba/nacos/releases
 
 ![screenshot-20210928-170958](image/screenshot-20210928-170958.png)
 
+### 将微服务注册到nacos中
+
+1. 修改pom.xml文件，引入Nacos Discovery Starter
+
+   ```xml
+   <!--服务注册/发现-->
+   <dependency>
+       <groupId>com.alibaba.cloud</groupId>
+       <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+   </dependency>
+   ```
+
+2. 使用@EnableDiscoveryClient开启服务注册发现功能
+
+   ![Snipaste_2021-10-02_21-24-31](image/Snipaste_2021-10-02_21-24-31.png)
+
+3. 配置文件的修改
+
+   ```yaml
+     cloud:
+       nacos:
+         discovery:
+           server-addr: 127.0.0.1:8848
+     application:
+       name: gulimall-coupon
+   ```
+
+4. 成功注册
+
+   ![Snipaste_2021-10-02_22-32-07](image/Snipaste_2021-10-02_22-32-07.png)
