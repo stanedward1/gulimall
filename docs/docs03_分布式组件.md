@@ -110,3 +110,26 @@ https://github.com/alibaba/nacos/releases
 4. 成功注册
 
    ![Snipaste_2021-10-02_22-32-07](image/Snipaste_2021-10-02_22-32-07.png)
+
+### nacos作为配置中心
+
+1. 修改pom.xml文件
+
+   ```xml
+   <!-- Nacos配置管理 -->
+   <!-- https://mvnrepository.com/artifact/com.alibaba.cloud/spring-cloud-starter-alibaba-nacos-config -->
+   <dependency>
+       <groupId>com.alibaba.cloud</groupId>
+       <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
+       <version>2021.1</version>
+   </dependency>
+   ```
+
+2. 添加配置文件(bootstrap.properties)
+
+   ```properties
+   spring.application.name=gulimall-coupon
+   spring.cloud.nacos.config.server-addr=127.0.0.1:8848
+   ```
+
+3. 测试
