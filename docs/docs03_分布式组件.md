@@ -13,6 +13,8 @@
     - [下载nacos-server](#%E4%B8%8B%E8%BD%BDnacos-server)
     - [启动nacos-server](#%E5%90%AF%E5%8A%A8nacos-server)
     - [将微服务注册到nacos中](#%E5%B0%86%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%B3%A8%E5%86%8C%E5%88%B0nacos%E4%B8%AD)
+    - [nacos作为配置中心](#nacos%E4%BD%9C%E4%B8%BA%E9%85%8D%E7%BD%AE%E4%B8%AD%E5%BF%83)
+    - [nacos作为配置中心的一些细节](#nacos%E4%BD%9C%E4%B8%BA%E9%85%8D%E7%BD%AE%E4%B8%AD%E5%BF%83%E7%9A%84%E4%B8%80%E4%BA%9B%E7%BB%86%E8%8A%82)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -143,3 +145,30 @@ https://github.com/alibaba/nacos/releases
    @Value(“${配置项的名}”): 获取到配置
 
    如果配置中心和当前应用的配置文件中都配置了相同的项，优先使用配置中心的配置。
+
+### nacos作为配置中心的一些细节
+
+1. 命名空间：配置隔离（多租户）：
+
+   1. 默认：public（保留空间）：默认新增的所有配置都在public空间
+
+   2. 开发，测试，生产环境的隔离。
+
+      注意：在bootstrap.properties：配置上：需要使用哪个命名空间下的配置
+
+      ```properties
+      spring.cloud.nacos.config.namespace=2ebb22cf-330a-4de8-92ee-24e10a8d7f5f
+      ```
+
+   3. 每一个微服务之间互相隔离配置，每一个微服务都创建自己的命名空间，只加载自己命名空间下的的配置文件。
+
+2. 配置集，所有的配置的集合
+
+3. 配置集ID，类似文件名
+
+   Data ID：类似文件名
+
+4. 配置分组
+
+   默认所有的配置集都属于：DEFAULT_GROUP
+
