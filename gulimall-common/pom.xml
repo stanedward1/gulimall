@@ -102,6 +102,13 @@
             <version>2.2.2.RELEASE</version>
         </dependency>
 
+        <!--解决nacos作为配置中心时拿取不到配置信息的错误-->
+        <!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-bootstrap -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-bootstrap</artifactId>
+            <version>3.0.4</version>
+        </dependency>
 
     </dependencies>
 
