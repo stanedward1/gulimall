@@ -1,4 +1,4 @@
-<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+c<!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 **Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
 
@@ -171,4 +171,6 @@ https://github.com/alibaba/nacos/releases
 4. 配置分组
 
    默认所有的配置集都属于：DEFAULT_GROUP
+
+**每个微服务创建自己的命名空间，使用配置分组**
 
